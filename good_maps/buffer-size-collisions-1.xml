@@ -1,0 +1,446 @@
+<!DOCTYPE Map>
+<Map buffer-size="100" buffer-size-collisions="200">
+
+    <Style name="dot">
+        <Rule>
+            <DotSymbolizer />
+        </Rule>
+    </Style>
+
+    <Style name="line">
+        <Rule>
+            <LineSymbolizer stroke="black"/>
+        </Rule>
+    </Style>
+
+    <Style name="line-pattern">
+        <Rule>
+            <LinePatternSymbolizer file="../images/dummy.png" />
+        </Rule>
+    </Style>
+
+    <Style name="polygon">
+        <Rule>
+            <PolygonSymbolizer fill="black"/>
+        </Rule>
+    </Style>
+
+    <Style name="polygon-pattern">
+        <Rule>
+            <PolygonPatternSymbolizer file="../images/dummy.png" />
+        </Rule>
+    </Style>
+
+    <Style name="point">
+        <Rule>
+            <PointSymbolizer />
+        </Rule>
+    </Style>
+
+    <Style name="marker1">
+        <Rule>
+            <MarkersSymbolizer />
+        </Rule>
+    </Style>
+
+    <Style name="marker2">
+        <Rule>
+            <MarkersSymbolizer ignore-placement="true" allow-overlap="true" />
+        </Rule>
+    </Style>
+
+    <Style name="marker3">
+        <Rule>
+            <MarkersSymbolizer ignore-placement="true" />
+        </Rule>
+    </Style>
+
+    <Style name="marker4">
+        <Rule>
+            <MarkersSymbolizer allow-overlap="true" />
+        </Rule>
+    </Style>
+
+    <Style name="text1">
+        <Rule>
+            <TextSymbolizer
+                face-name="DejaVu Sans Book"
+                size="16"
+                placement="point"
+                allow-overlap="true">"Text"</TextSymbolizer>
+        </Rule>
+    </Style>
+
+    <Style name="text2">
+        <Rule>
+            <TextSymbolizer
+                face-name="DejaVu Sans Book"
+                size="16"
+                placement="point">"Text"</TextSymbolizer>
+        </Rule>
+    </Style>
+
+    <Style name="shield1">
+        <Rule>
+            <ShieldSymbolizer
+                face-name="DejaVu Sans Book"
+                file="../images/dummy.png"
+                size="16"
+                placement="point"
+                allow-overlap="true">"Text"</ShieldSymbolizer>
+        </Rule>
+    </Style>
+
+    <Style name="shield2">
+        <Rule>
+            <ShieldSymbolizer
+                face-name="DejaVu Sans Book"
+                file="../images/dummy.png"
+                size="16"
+                placement="point">"Text"</ShieldSymbolizer>
+        </Rule>
+    </Style>
+
+    <Style name="raster">
+        <Rule>
+            <RasterSymbolizer />
+        </Rule>
+    </Style>
+
+    <Style name="building">
+        <Rule>
+            <BuildingSymbolizer />
+        </Rule>
+    </Style>
+
+    <Style name="group">
+        <Rule>
+            <GroupSymbolizer
+                start-column="1"
+                num-columns="2"
+                placement="point"
+                minimum-distance="10"
+                spacing="20">
+                <PairLayout item-margin="1"/>
+                <GroupRule>
+                    <PointSymbolizer />
+                    <TextSymbolizer
+                        face-name="DejaVu Sans Book"
+                        size="16"
+                        placement="point"
+                        dy="10">"Text"</TextSymbolizer>
+                </GroupRule>
+            </GroupSymbolizer>
+        </Rule>
+    </Style>
+
+    <Style name="collision">
+        <Rule>
+            <CollisionSymbolizer />
+        </Rule>
+    </Style>
+
+    <Style name="debug">
+        <Rule>
+            <DebugSymbolizer />
+        </Rule>
+    </Style>
+
+    <Style name="mix">
+        <Rule>
+            <DotSymbolizer />
+            <LineSymbolizer stroke="black"/>
+            <LinePatternSymbolizer file="../images/dummy.png" />
+            <PolygonSymbolizer fill="black"/>
+            <PolygonPatternSymbolizer file="../images/dummy.png" />
+            <PointSymbolizer />
+            <MarkersSymbolizer />
+            <MarkersSymbolizer ignore-placement="true" allow-overlap="true" />
+            <MarkersSymbolizer ignore-placement="true" />
+            <MarkersSymbolizer allow-overlap="true" />
+            <TextSymbolizer
+                face-name="DejaVu Sans Book"
+                size="16"
+                placement="point"
+                allow-overlap="true">"Text"</TextSymbolizer>
+            <TextSymbolizer
+                face-name="DejaVu Sans Book"
+                size="16"
+                placement="point">"Text"</TextSymbolizer>
+            <ShieldSymbolizer
+                face-name="DejaVu Sans Book"
+                file="../images/dummy.png"
+                size="16"
+                placement="point"
+                allow-overlap="true">"Text"</ShieldSymbolizer>
+            <ShieldSymbolizer
+                face-name="DejaVu Sans Book"
+                file="../images/dummy.png"
+                size="16"
+                placement="point">"Text"</ShieldSymbolizer>
+            <RasterSymbolizer />
+            <BuildingSymbolizer />
+            <GroupSymbolizer
+                start-column="1"
+                num-columns="2"
+                placement="point"
+                minimum-distance="10"
+                spacing="20">
+                <PairLayout item-margin="1"/>
+                <GroupRule>
+                    <PointSymbolizer />
+                    <TextSymbolizer
+                        face-name="DejaVu Sans Book"
+                        size="16"
+                        placement="point"
+                        dy="10">"Text"</TextSymbolizer>
+                </GroupRule>
+            </GroupSymbolizer>
+            <CollisionSymbolizer />
+            <DebugSymbolizer />
+        </Rule>
+    </Style>
+
+    <Layer name="dot">
+        <StyleName>dot</StyleName>
+        <Datasource>
+            <Parameter name="type">csv</Parameter>
+            <Parameter name="inline">
+                x, y
+                0, 0
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="line">
+        <StyleName>line</StyleName>
+        <Datasource>
+            <Parameter name="type">csv</Parameter>
+            <Parameter name="inline">
+                x, y
+                0, 0
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="line-pattern">
+        <StyleName>line-pattern</StyleName>
+        <Datasource>
+            <Parameter name="type">csv</Parameter>
+            <Parameter name="inline">
+                x, y
+                0, 0
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="polygon">
+        <StyleName>polygon</StyleName>
+        <Datasource>
+            <Parameter name="type">csv</Parameter>
+            <Parameter name="inline">
+                x, y
+                0, 0
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="polygon-pattern">
+        <StyleName>polygon-pattern</StyleName>
+        <Datasource>
+            <Parameter name="type">csv</Parameter>
+            <Parameter name="inline">
+                x, y
+                0, 0
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="point">
+        <StyleName>point</StyleName>
+        <Datasource>
+            <Parameter name="type">csv</Parameter>
+            <Parameter name="inline">
+                x, y
+                0, 0
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="marker1">
+        <StyleName>marker1</StyleName>
+        <Datasource>
+            <Parameter name="type">csv</Parameter>
+            <Parameter name="inline">
+                x, y
+                0, 0
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="marker2">
+        <StyleName>marker2</StyleName>
+        <Datasource>
+            <Parameter name="type">csv</Parameter>
+            <Parameter name="inline">
+                x, y
+                0, 0
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="marker3">
+        <StyleName>marker3</StyleName>
+        <Datasource>
+            <Parameter name="type">csv</Parameter>
+            <Parameter name="inline">
+                x, y
+                0, 0
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="marker4">
+        <StyleName>marker4</StyleName>
+        <Datasource>
+            <Parameter name="type">csv</Parameter>
+            <Parameter name="inline">
+                x, y
+                0, 0
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="text1">
+        <StyleName>text1</StyleName>
+        <Datasource>
+            <Parameter name="type">csv</Parameter>
+            <Parameter name="inline">
+                x, y
+                0, 0
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="text2">
+        <StyleName>text2</StyleName>
+        <Datasource>
+            <Parameter name="type">csv</Parameter>
+            <Parameter name="inline">
+                x, y
+                0, 0
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="shield1">
+        <StyleName>shield1</StyleName>
+        <Datasource>
+            <Parameter name="type">csv</Parameter>
+            <Parameter name="inline">
+                x, y
+                0, 0
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="shield2">
+        <StyleName>shield2</StyleName>
+        <Datasource>
+            <Parameter name="type">csv</Parameter>
+            <Parameter name="inline">
+                x, y
+                0, 0
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="raster">
+        <StyleName>raster</StyleName>
+        <Datasource>
+            <Parameter name="type">csv</Parameter>
+            <Parameter name="inline">
+                x, y
+                0, 0
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="building">
+        <StyleName>building</StyleName>
+        <Datasource>
+            <Parameter name="type">csv</Parameter>
+            <Parameter name="inline">
+                x, y
+                0, 0
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="group">
+        <StyleName>group</StyleName>
+        <Datasource>
+            <Parameter name="type">csv</Parameter>
+            <Parameter name="inline">
+                x, y
+                0, 0
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="collision">
+        <StyleName>collision</StyleName>
+        <Datasource>
+            <Parameter name="type">csv</Parameter>
+            <Parameter name="inline">
+                x, y
+                0, 0
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="debug">
+        <StyleName>debug</StyleName>
+        <Datasource>
+            <Parameter name="type">csv</Parameter>
+            <Parameter name="inline">
+                x, y
+                0, 0
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="mix">
+        <StyleName>mix</StyleName>
+        <Datasource>
+            <Parameter name="type">csv</Parameter>
+            <Parameter name="inline">
+                x, y
+                0, 0
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="marker-override" buffer-size="30">
+        <StyleName>marker1</StyleName>
+        <Datasource>
+            <Parameter name="type">csv</Parameter>
+            <Parameter name="inline">
+                x, y
+                0, 0
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="text-override" buffer-size="30">
+        <StyleName>text1</StyleName>
+        <Datasource>
+            <Parameter name="type">csv</Parameter>
+            <Parameter name="inline">
+                x, y
+                0, 0
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+</Map>
