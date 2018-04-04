@@ -2,11 +2,12 @@
 <!DOCTYPE Map>
 <Map background-color="blue" srs="+proj=latlong +datum=WGS84">
     <Parameters>
+        <Parameter name="parallel">true</Parameter>
         <Parameter name="sizes">400, 400</Parameter>
         <Parameter name="bbox">-1.05, -1.05, 1.05, 1.05</Parameter>
     </Parameters>
 
-    <Layer name="__parallel-lines" srs="+proj=latlong +datum=WGS84" comp-op="src-over">
+    <Layer name="lines" srs="+proj=latlong +datum=WGS84" comp-op="src-over">
         <StyleName>lines</StyleName>
         <Datasource>
             <Parameter name="type">csv</Parameter>
