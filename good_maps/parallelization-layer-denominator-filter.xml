@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map>
+<Map background-color="blue" srs="+proj=latlong +datum=WGS84">
+    <Parameters>
+        <Parameter name="parallel">true</Parameter>
+        <Parameter name="sizes">400, 400</Parameter>
+        <Parameter name="bbox">-1.05, -1.05, 1.05, 1.05</Parameter>
+    </Parameters>
+
+    <Layer name="poly" srs="+proj=latlong +datum=WGS84" comp-op="src-over">
+        <StyleName>poly</StyleName>
+        <Datasource>
+            <Parameter name="type">csv</Parameter>
+            <Parameter name="inline">
+                wkt
+                "POLYGON((1 0, 0 -1, -1 0, 0 1, 1 0))"
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="pattern"
+        srs="+proj=latlong +datum=WGS84"
+        comp-op="src-in"
+        maximum-scale-denominator="1">
+
+        <StyleName>pattern</StyleName>
+        <Datasource>
+            <Parameter name="type">csv</Parameter>
+            <Parameter name="inline">
+                wkt
+                "POLYGON((1 0, 0 -1, -1 0, 0 1, 1 0))"
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <Style name="poly">
+        <Rule>
+            <PolygonSymbolizer fill="red" />
+        </Rule>
+    </Style>
+
+    <Style name="pattern">
+        <Rule>
+            <PolygonPatternSymbolizer file="../svg/ellipses.svg" />
+        </Rule>
+    </Style>
+
+</Map>
