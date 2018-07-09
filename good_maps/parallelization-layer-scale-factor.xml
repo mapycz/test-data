@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map>
+<Map background-color="blue" srs="+proj=latlong +datum=WGS84">
+    <Parameters>
+        <Parameter name="parallel">true</Parameter>
+        <Parameter name="sizes">400, 400</Parameter>
+        <Parameter name="bbox">-1.05, -1.05, 1.05, 1.05</Parameter>
+    </Parameters>
+
+    <Layer name="lines" srs="+proj=latlong +datum=WGS84" comp-op="src-over">
+        <Parameters>
+            <Parameter name="scale_factor">1</Parameter>
+            <Parameter name="scaling">bilinear-fast</Parameter>
+        </Parameters>
+
+        <StyleName>lines</StyleName>
+
+        <Datasource>
+            <Parameter name="type">csv</Parameter>
+            <Parameter name="inline">
+                wkt
+                "POLYGON((1 0, 0 -1, -1 0, 0 1, 1 0))"
+            </Parameter>
+        </Datasource>
+    </Layer>
+
+    <!--Layer name="marker" srs="+proj=latlong +datum=WGS84" comp-op="src-over">
+        <StyleName>marker</StyleName>
+        <Datasource>
+            <Parameter name="type">csv</Parameter>
+            <Parameter name="inline">
+                wkt
+                "POLYGON((1 0, 0 -1, -1 0, 0 1, 1 0))"
+            </Parameter>
+        </Datasource>
+    </Layer-->
+
+    <Style name="lines">
+        <Rule>
+            <LineSymbolizer
+                stroke-width="12"
+                stroke="rgb(255, 100, 100)"
+                />
+        </Rule>
+    </Style>
+
+    <Style name="marker">
+        <Rule>
+            <MarkersSymbolizer placement="line" />
+        </Rule>
+    </Style>
+
+</Map>
