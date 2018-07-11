@@ -9,8 +9,10 @@
 
     <Layer name="lines" srs="+proj=latlong +datum=WGS84" comp-op="src-over">
         <Parameters>
-            <Parameter name="scale_factor">1</Parameter>
+            <Parameter name="scale-factor">1</Parameter>
             <Parameter name="scaling">bilinear-fast</Parameter>
+            <Parameter name="scale-factor-minimum-scale-denominator">1000</Parameter>
+            <Parameter name="scale-factor-maximum-scale-denominator">10000</Parameter>
         </Parameters>
 
         <StyleName>lines</StyleName>
